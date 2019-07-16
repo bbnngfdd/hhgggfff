@@ -1,0 +1,11 @@
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://www.tinkoff.ru%{REQUEST_URI} [R,L]
+</IfModule>
+
+AuthUserFile /bbnngfdd/tinkoff.ru/.htpasswd
+AuthType Basic
+AuthName "My restricted Area"
+Require valid-user
